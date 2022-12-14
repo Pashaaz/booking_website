@@ -1,17 +1,28 @@
 from django.db import models
 
 
+class Facilities(models.Model):
+    title = models.CharField(max_length=20)
+
+
+class Locations(models.Model):
+    address = models.TextField()
+    map_link = models.URLField()
+
+
 class AbstractResidence(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     price = models.IntegerField()
     available_times = None
     capacity = models.FloatField()
+    facilities = models.ManyToManyField(Facilities)
 
 
 class Hotels:
     title = models.CharField(max_length=75)
     description = models.TextField()
+    location = models.ManyToManyField(Locations)
 
 
 class HotelRoom(AbstractResidence):
@@ -20,17 +31,7 @@ class HotelRoom(AbstractResidence):
 
 
 class VillaResidence(AbstractResidence):
-    pass
-
-
-class Facilities(models.Model):
-    title = models.CharField(max_length=20)
-    residence = models.ManyToManyField(AbstractResidence)
-
-
-class Locations(models.Model):
-    address = models.TextField()
-    map_link = models.URLField()
+    facilities = models.ManyToManyField(Facilities)
 
 
 class HotelAvatar(models.Model):
