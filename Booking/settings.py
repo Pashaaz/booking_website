@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'residence.apps.ResidenceConfig',
     'transportation.apps.TransportationConfig',
+    'book.apps.BookConfig',
 ]
 
 MIDDLEWARE = [
