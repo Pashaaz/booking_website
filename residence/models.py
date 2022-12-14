@@ -19,7 +19,7 @@ class AbstractResidence(models.Model):
     facilities = models.ManyToManyField(Facilities)
 
 
-class Hotels:
+class Hotels(models.Model):
     title = models.CharField(max_length=75)
     description = models.TextField()
     location = models.ManyToManyField(Locations)
@@ -31,7 +31,7 @@ class HotelRoom(AbstractResidence):
 
 
 class VillaResidence(AbstractResidence):
-    facilities = models.ManyToManyField(Facilities)
+    pass
 
 
 class HotelAvatar(models.Model):
