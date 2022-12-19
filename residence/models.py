@@ -18,6 +18,9 @@ class AbstractResidence(models.Model):
     capacity = models.FloatField()
     facilities = models.ManyToManyField(Facilities)
 
+    class Meta:
+        abstract = True
+
 
 class Hotels(models.Model):
     title = models.CharField(max_length=75)
@@ -30,8 +33,8 @@ class HotelRoom(AbstractResidence):
     hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='rooms')
 
 
-class VillaResidence(AbstractResidence):
-    location = models.ForeignKey(Locations, on_delete=models.CASCADE, related_name='villa_locations')
+# class VillaResidence(AbstractResidence):
+#     location = models.ForeignKey(Locations, on_delete=models.CASCADE, related_name='villa_locations')
 
 
 class HotelAvatar(models.Model):
@@ -39,6 +42,6 @@ class HotelAvatar(models.Model):
     hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='photos')
 
 
-class ResidenceAvatar(models.Model):
+class HotelRoomAvatar(models.Model):
     image = models.ImageField(upload_to='residences/avatars')
-    residence = models.ForeignKey(AbstractResidence, on_delete=models.CASCADE, related_name='photos')
+    residence = models.ForeignKey(HotelRoom, on_delete=models.CASCADE, related_name='photos')
