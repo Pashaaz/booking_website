@@ -22,7 +22,7 @@ class AbstractResidence(models.Model):
 class Hotels(models.Model):
     title = models.CharField(max_length=75)
     description = models.TextField()
-    location = models.ManyToManyField(Locations)
+    location = models.ForeignKey(Locations, on_delete=models.CASCADE, related_name='hotel_locations')
 
 
 class HotelRoom(AbstractResidence):
@@ -31,7 +31,7 @@ class HotelRoom(AbstractResidence):
 
 
 class VillaResidence(AbstractResidence):
-    pass
+    location = models.ForeignKey(Locations, on_delete=models.CASCADE, related_name='villa_locations')
 
 
 class HotelAvatar(models.Model):
