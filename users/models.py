@@ -4,19 +4,13 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CustomUser(AbstractUser):
-    phone = models.IntegerField(unique=True, validators=[RegexValidator(
+    phone = models.CharField(max_length=11, unique=True, validators=[RegexValidator(
         regex='09(1[0-9]|3[1-9]|2[1-9])-?[0-9]{3}-?[0-9]{4}',
         message='Please enter a valid number (09...)')])
-    password = models.CharField(max_length=20,
-                                validators=[RegexValidator(regex='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$',
-                                                           message='Password must contain at least 8 characters,'
-                                                                   ' 1 number, and 1 letter'
-                                                           )])
-
-    user_profile = models.OneToOneField('UserProfile', on_delete=models.CASCADE)
+    password = models.CharField(max_length=20)
 
     USERNAME_FIELD = "phone"
-    REQUIRED_FIELDS = ["password"]
+    REQUIRED_FIELDS = ["username"]
 
 
 class UserProfile(models.Model):
@@ -26,6 +20,8 @@ class UserProfile(models.Model):
     ]
                                           )
     date_of_birth = models.DateField(blank=True, null=True)
+
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
 
     card_number = models.IntegerField(blank=True, null=True)
     bank_account_number = models.IntegerField(blank=True, null=True)
