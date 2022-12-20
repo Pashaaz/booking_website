@@ -19,7 +19,7 @@ class AbstractTransport(models.Model):
         abstract = True
 
 
-class AirlineTransport(AbstractTransport):
+class Flight(AbstractTransport):
     gate = models.CharField(max_length=10)
     flight_type = models.CharField(max_length=20)
     flight = models.CharField(max_length=50)
