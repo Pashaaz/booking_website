@@ -13,6 +13,7 @@ class AbstractTransport(models.Model):
     boarding_till = models.TimeField()
     depart_time = models.TimeField()
     arrive_time = models.TimeField()
+    ticket_enrollment = models.IntegerField()
 
     class Meta:
         abstract = True
@@ -23,7 +24,5 @@ class AirlineTransport(AbstractTransport):
     flight_type = models.CharField(max_length=20)
     flight = models.CharField(max_length=50)
 
-
-class AirlineTicket(models.Model):
-    seat = models.CharField(max_length=10)
-    airline = models.ForeignKey(AirlineTransport, on_delete=models.CASCADE, related_name='tickets')
+    def get_available_tickets(self):
+        pass
