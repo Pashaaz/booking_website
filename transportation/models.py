@@ -3,6 +3,9 @@ from django.db import models
 
 class Companies(models.Model):
     title = models.CharField(max_length=100)
+    created_time = models.DateTimeField(auto_now_add=True)
+    modified_time = models.DateTimeField(auto_now=True)
+    is_valid = models.BooleanField(default=True)
 
 
 class AbstractTransport(models.Model):
@@ -23,6 +26,9 @@ class Flight(AbstractTransport):
     gate = models.CharField(max_length=10)
     flight_type = models.CharField(max_length=20)
     flight = models.CharField(max_length=50)
+    created_time = models.DateTimeField(auto_now_add=True)
+    modified_time = models.DateTimeField(auto_now=True)
+    is_valid = models.BooleanField(default=True)
 
     def get_available_tickets(self):
         pass

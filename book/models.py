@@ -17,6 +17,7 @@ class AbstractBooking(models.Model):
     status = models.IntegerField(choices=STATUS_CHOICES, default=1)
     booked_time = models.DateTimeField(auto_now_add=True)
     updated_time = models.DateTimeField(auto_now=True)
+    is_valid = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
@@ -36,3 +37,4 @@ class HotelRoomBooking(AbstractBooking):
 class FlightBooking(AbstractBooking):
     user = models.ForeignKey(CustomUser, on_delete=models.DO_NOTHING, related_name='user_flights')
     flight = models.ForeignKey(Flight, on_delete=models.CASCADE, related_name='flight_bookings')
+    is_valid = models.BooleanField(default=True)
