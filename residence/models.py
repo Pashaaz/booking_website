@@ -1,7 +1,7 @@
 from django.db import models
 
 
-# Simple models ...
+# Simple models --------------------------------------------------------------------------------------------------------
 class Facilities(models.Model):
     title = models.CharField(max_length=20)
     created_time = models.DateTimeField(auto_now_add=True)
@@ -17,10 +17,10 @@ class Locations(models.Model):
     is_valid = models.BooleanField(default=True)
 
 
-# End of simple models.
+# End of simple models -------------------------------------------------------------------------------------------------
 
 
-# Abstract models ....
+# Abstract models ------------------------------------------------------------------------------------------------------
 class AbstractResidence(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
@@ -33,9 +33,9 @@ class AbstractResidence(models.Model):
         abstract = True
 
 
-# End of abstract models.
+# End of abstract models -----------------------------------------------------------------------------------------------
 
-# Main models ...
+# Main models ----------------------------------------------------------------------------------------------------------
 class Hotels(models.Model):
     title = models.CharField(max_length=75)
     description = models.TextField()
@@ -57,9 +57,9 @@ class HotelRoom(AbstractResidence):
 #     location = models.ForeignKey(Locations, on_delete=models.CASCADE, related_name='villa_locations')
 
 
-# End of main models.
+# End of main models ---------------------------------------------------------------------------------------------------
 
-# Avatar models ...
+# Avatar models --------------------------------------------------------------------------------------------------------
 class HotelAvatar(models.Model):
     image = models.ImageField(upload_to='hotels/avatars')
     hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='photos')
@@ -75,4 +75,4 @@ class HotelRoomAvatar(models.Model):
     modified_time = models.DateTimeField(auto_now=True)
     is_valid = models.BooleanField(default=True)
 
-# End of avatar models.
+# End of avatar models -------------------------------------------------------------------------------------------------
