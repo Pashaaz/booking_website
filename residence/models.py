@@ -39,7 +39,7 @@ class AbstractResidence(models.Model):
 class Hotels(models.Model):
     title = models.CharField(max_length=75)
     description = models.TextField()
-    location = models.ForeignKey(Locations, on_delete=models.CASCADE, related_name='hotel_locations')
+    location = models.ForeignKey(Locations, on_delete=models.CASCADE)
     created_time = models.DateTimeField(auto_now_add=True)
     modified_time = models.DateTimeField(auto_now=True)
     is_valid = models.BooleanField(default=True)
