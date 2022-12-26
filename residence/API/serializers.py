@@ -27,19 +27,19 @@ class LocationSerializer(serializers.ModelSerializer):
 
 
 class HotelSerializer(serializers.ModelSerializer):
-    # hotel_locations = LocationSerializer(many=True)
+    location = LocationSerializer()
     photos = HotelAvatarSerializer(many=True)
 
     class Meta:
         model = Hotels
-        fields = ('title', 'description', 'photos')
+        fields = ('title', 'description', 'photos', 'location')
 
 
 class HotelRoomSerializer(serializers.ModelSerializer):
-    facility = FacilitySerializer(many=True)
+    facilities = FacilitySerializer(many=True)
     hotel = HotelSerializer()
-    # image = HotelRoomAvatarSerializer(many=True)
+    photos = HotelRoomAvatarSerializer(many=True)
 
     class Meta:
         model = HotelRoom
-        fields = ('title', 'description', 'price', 'capacity', 'room_number', 'facility', 'hotel')
+        fields = ('title', 'description', 'price', 'capacity', 'room_number', 'facilities', 'hotel', 'photos')
