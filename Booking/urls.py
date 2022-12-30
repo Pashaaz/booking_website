@@ -21,7 +21,8 @@ from Booking import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('residence/', include('residence.urls'))
+    path('residence/', include('residence.urls')),
+    path('transport/', include('transportation.urls'))
 ]
 
 if settings.DEBUG:
