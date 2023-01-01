@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from residence.API.views import HotelsViewSet, HotelRoomViewSet
+from residence.api.views import HotelsViewSet, HotelRoomViewSet
 
 router = DefaultRouter()
 

@@ -1,5 +1,5 @@
 from rest_framework import viewsets, mixins
-from residence.API.serializers import HotelSerializer, HotelRoomSerializer
+from residence.api.serializers import HotelSerializer, HotelRoomSerializer
 from residence.models import Hotels, HotelRoom
 
 
