@@ -8,9 +8,10 @@ class CustomUser(AbstractUser):
         regex='09(1[0-9]|3[1-9]|2[1-9])-?[0-9]{3}-?[0-9]{4}',
         message='Please enter a valid number (09...)')])
     password = models.CharField(max_length=20)
+    email = models.EmailField(unique=True)
 
-    USERNAME_FIELD = "phone"
-    REQUIRED_FIELDS = ["username"]
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ["username", "phone"]
 
 
 class UserProfile(models.Model):
