@@ -1,4 +1,5 @@
-from rest_framework import serializers
+from django.db import transaction
+from rest_framework import serializers, exceptions
 from residence.models import *
 
 
@@ -32,7 +33,23 @@ class HotelSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Hotels
-        fields = ('title', 'description', 'photos', 'location')
+        fields = ('id', 'title', 'description', 'photos', 'location')
+
+    @transaction.atomic
+    def create(self, validated_data):
+        location = validated_data.pop('location', None)
+        photos = validated_data.pop('photos', None)
+
+        try:
+            location = Locations.objects.get_or_create(**location)
+            HotelAvatar.objects.get_or_create(all(photos))
+
+        except (ValueError, TypeError):
+            raise exceptions.ValidationError('Invalid data!')
+
+        hotel = Hotels.objects.create(location=location, **validated_data)
+
+        return hotel
 
 
 class HotelRoomSerializer(serializers.ModelSerializer):
@@ -43,3 +60,21 @@ class HotelRoomSerializer(serializers.ModelSerializer):
     class Meta:
         model = HotelRoom
         fields = ('title', 'description', 'price', 'capacity', 'room_number', 'facilities', 'hotel', 'photos')
+
+    @transaction.atomic
+    def create(self, validated_data):
+        hotel = validated_data.pop('hotel', None)
+        photos = validated_data.pop('photos', None)
+        facilities = validated_data('facilities', None)
+
+        try:
+            hotel = Hotels.objects.get_or_create(**hotel)
+            HotelRoomAvatar.objects.get_or_create(all(**photos))
+            Facilities.objects.get_or_create(all(**photos))
+
+        except (ValueError, TypeError):
+            raise exceptions.ValidationError('Invalid data!')
+
+        room = HotelRoom.objects.create(hotel=hotel, facilities=facilities, **validated_data)
+
+        return room
