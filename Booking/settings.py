@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'transportation.apps.TransportationConfig',
     'book.apps.BookConfig',
     'users.apps.UsersConfig',
+    'price.apps.PriceConfig',
 
 ]
 
