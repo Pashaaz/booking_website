@@ -41,6 +41,7 @@ class HotelRoomBookingFilter(filters.FilterSet):
     class Meta:
         model = HotelRoomBooking
         fields = {
+            'hotel_room__id': 'exact',
             'start_date': ['gte', 'lte'],
             'end_date': ['gte', 'lte'],
         }
