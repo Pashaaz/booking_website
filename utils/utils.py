@@ -19,3 +19,12 @@ def otp_gen():
         otp += str(randint(0, 9))
 
     return otp
+
+
+def update_price(update_number, model):
+
+    for obj in model.objects.all():
+        addition_or_subtraction_num = obj.price * update_number / 100
+        obj.price = obj.price + addition_or_subtraction_num
+
+        obj.save()
