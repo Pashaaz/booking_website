@@ -22,8 +22,8 @@ class HotelRoomSearchBookedViewSet(mixins.ListModelMixin,
 class FlightAvailableNumber(APIView):
 
     def get(self, request):
-        flight = Flight.objects.get(id=request.data.get('id'))
-        available = FlightBooking.available_number(flight)
+        flight_booking_object = FlightBooking.objects.get(flight_id=request.data.get('id'))
+        available = FlightBooking.available_number(flight_booking_object)
 
         return Response({'available': available})
 
