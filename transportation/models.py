@@ -21,7 +21,6 @@ class AbstractTransport(models.Model):
     boarding_till = models.TimeField()
     depart_time = models.TimeField()
     arrive_time = models.TimeField()
-    ticket_enrollment = models.IntegerField()
 
     class Meta:
         abstract = True
@@ -33,8 +32,8 @@ class AbstractTransport(models.Model):
 # Main models ...
 class Flight(AbstractTransport):
     gate = models.CharField(max_length=10)
-    flight_type = models.CharField(max_length=20)
     flight = models.CharField(max_length=50)
+    capacity = models.IntegerField()
     created_time = models.DateTimeField(auto_now_add=True)
     modified_time = models.DateTimeField(auto_now=True)
     is_valid = models.BooleanField(default=True)
