@@ -17,11 +17,11 @@ class HotelRoomFilter(filters.FilterSet):
     class Meta:
         model = HotelRoom
         fields = {
-            # 'title': 'exact',
+            'title': '',
             # 'payment': ['gte', 'lte'],
             'capacity': ['exact', 'gte', 'lte'],
-            # 'facilities__title': 'exact',
-            # 'hotel__title': 'exact',
+            'facilities__title': '',
+            'hotel__title': '',
         }
 
 
