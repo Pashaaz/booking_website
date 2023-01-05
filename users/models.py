@@ -22,7 +22,7 @@ class UserProfile(models.Model):
                                           )
     date_of_birth = models.DateField(blank=True, null=True)
 
-    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
 
     card_number = models.IntegerField(blank=True, null=True)
     bank_account_number = models.IntegerField(blank=True, null=True)

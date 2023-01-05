@@ -9,8 +9,8 @@ from book.api.views import (HotelRoomBookingViewSet,
 
 router = DefaultRouter()
 
-router.register(r'book/hotelroom', HotelRoomBookingViewSet, basename='bookhotelroom')
-router.register(r'book/flight', FlightBookingViewSet, basename='bookflight')
+router.register(r'hotelroom', HotelRoomBookingViewSet, basename='hotelroom')
+router.register(r'flight', FlightBookingViewSet, basename='flight')
 router.register(r'search/booked/hotelrooms', HotelRoomSearchBookedViewSet, basename='searchbookedhotelrooms')
 
 urlpatterns = [

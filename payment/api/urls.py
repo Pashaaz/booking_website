@@ -4,8 +4,8 @@ from payment.api.views import HotelRoomAfterPaymentAPIView, FlightAfterPaymentAP
 
 router = DefaultRouter()
 
-router.register(r'payment/hotelroom', HotelRoomAfterPaymentAPIView, basename='paymenthotelroom')
-router.register(r'payment/flight', FlightAfterPaymentAPIView, basename='paymentflight')
+router.register(r'hotelroom', HotelRoomAfterPaymentAPIView, basename='hotelroom')
+router.register(r'flight', FlightAfterPaymentAPIView, basename='flight')
 
 
 urlpatterns = [
