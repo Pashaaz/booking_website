@@ -9,7 +9,7 @@ class HotelFilter(filters.FilterSet):
     class Meta:
         model = Hotels
         fields = {
-            'title': 'exact'
+            # 'title': 'exact',
         }
 
 
@@ -17,11 +17,11 @@ class HotelRoomFilter(filters.FilterSet):
     class Meta:
         model = HotelRoom
         fields = {
-            'title': 'exact',
-            'payment': ['gte', 'lte'],
+            # 'title': 'exact',
+            # 'payment': ['gte', 'lte'],
             'capacity': ['exact', 'gte', 'lte'],
-            'facilities__title': 'exact',
-            'hotel__title': 'exact',
+            # 'facilities__title': 'exact',
+            # 'hotel__title': 'exact',
         }
 
 
@@ -29,11 +29,11 @@ class FlightFilter(filters.FilterSet):
     class Meta:
         model = Flight
         fields = {
-            'company__title': 'exact',
-            'origin': 'exact',
-            'destination': 'exact',
-            'date': 'exact',
-            'flight_type': 'exact',
+            # 'company__title': 'exact',
+            'origin': '',
+            'destination': '',
+            'date': '',
+            # 'flight_type': '',
         }
 
 
@@ -41,7 +41,7 @@ class HotelRoomBookingFilter(filters.FilterSet):
     class Meta:
         model = HotelRoomBooking
         fields = {
-            'hotel_room__id': 'exact',
+            'hotel_room__id': '',
             'start_date': ['gte', 'lte'],
             'end_date': ['gte', 'lte'],
         }

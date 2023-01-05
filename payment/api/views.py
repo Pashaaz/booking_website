@@ -6,13 +6,13 @@ from payment.api.serializers import FlightPaymentLogSerializer, HotelRoomPayment
 from payment.models import FlightPaymentLog, HotelRoomPaymentLog
 
 
-class HotelRoomAfterPaymentAPIView(GenericAPIView):
-
-    serializer_class = HotelRoomPaymentLogSerializer
-    queryset = HotelRoomPaymentLog.objects.all()
-
-
-class FlightAfterPaymentAPIView(GenericAPIView):
-
-    serializer_class = FlightPaymentLogSerializer
-    queryset = FlightPaymentLog.objects.all()
+# class HotelRoomAfterPaymentAPIView(GenericAPIView):
+#
+#     serializer_class = HotelRoomPaymentLogSerializer
+#     queryset = HotelRoomPaymentLog.objects.all()
+#
+#
+# class FlightAfterPaymentAPIView(GenericAPIView):
+#
+#     serializer_class = FlightPaymentLogSerializer
+#     queryset = FlightPaymentLog.objects.all()
