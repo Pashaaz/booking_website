@@ -18,7 +18,7 @@ class HotelRoomFilter(filters.FilterSet):
         model = HotelRoom
         fields = {
             'title': 'exact',
-            'price': ['gte', 'lte'],
+            'payment': ['gte', 'lte'],
             'capacity': ['exact', 'gte', 'lte'],
             'facilities__title': 'exact',
             'hotel__title': 'exact',
