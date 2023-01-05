@@ -14,8 +14,8 @@ class FlightSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Flight
-        fields = ('company', 'origin', 'destination', 'date', 'boarding_till', 'depart_time',
-                  'arrive_time', 'ticket_enrollment', 'gate', 'flight',)
+        fields = ('id', 'company', 'origin', 'destination', 'date', 'boarding_till', 'depart_time',
+                  'arrive_time', 'capacity', 'gate', 'flight',)
 
     @transaction.atomic
     def create(self, validated_data):
