@@ -5,7 +5,7 @@ from residence.models import HotelRoom
 from transportation.models import Flight
 
 
-# Abstract models ------------------------------------------------------------------------------------------------------
+# -------------------------------------------- Abstract models ---------------------------------------------------------
 
 class AbstractBooking(models.Model):
     STATUS_CHOICES = (
@@ -24,9 +24,9 @@ class AbstractBooking(models.Model):
         abstract = True
 
 
-# End of abstract models -----------------------------------------------------------------------------------------------
+# ---------------------------------------- End of abstract models ------------------------------------------------------
 
-# Main models ----------------------------------------------------------------------------------------------------------
+# ---------------------------------------------- Main models -----------------------------------------------------------
 
 class HotelRoomBooking(AbstractBooking):
     user = models.ForeignKey(CustomUser, on_delete=models.DO_NOTHING, related_name='user_hotel_rooms')
@@ -68,4 +68,4 @@ class FlightBooking(AbstractBooking):
 
         return available_number
 
-# End of main models ---------------------------------------------------------------------------------------------------
+# --------------------------------------------- End of main models -----------------------------------------------------
