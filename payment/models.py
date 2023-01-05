@@ -14,7 +14,6 @@ class AbstractPrice(models.Model):
 
 
 class AbstractPaymentLog(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.DO_NOTHING)
     date = models.DateTimeField(auto_now_add=True)
     status = models.BooleanField(default=True)
 
@@ -38,8 +37,10 @@ class FlightPrice(AbstractPrice):
 
 
 class HotelRoomPaymentLog(AbstractPaymentLog):
-    booking_obj = models.ForeignKey(HotelRoomBooking, on_delete=models.DO_NOTHING)
+    user = models.ForeignKey(CustomUser, on_delete=models.DO_NOTHING, related_name='user_room_payments')
+    booking_obj = models.ForeignKey(HotelRoomBooking, on_delete=models.DO_NOTHING, related_name='room_payments')
 
 
 class FlightPaymentLog(AbstractPaymentLog):
-    booking_obj = models.ForeignKey(FlightBooking, on_delete=models.DO_NOTHING)
+    user = models.ForeignKey(CustomUser, on_delete=models.DO_NOTHING, related_name='user_flight_payments')
+    booking_obj = models.ForeignKey(FlightBooking, on_delete=models.DO_NOTHING, related_name='flight_payments')
