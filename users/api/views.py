@@ -47,11 +47,12 @@ class LoginFirstAPIView(GenericAPIView):
 
     def post(self, request):
         serializer = self.get_serializer(data=request.data)
-        email = request.data['email']
-        code = otp_gen()
-        cache.set(str(email), code, 120)
-
         if serializer.is_valid(raise_exception=True):
+
+            email = request.data['email']
+            code = otp_gen()
+            cache.set(str(email), code, 120)
+
             return Response({"code": code})
 
 

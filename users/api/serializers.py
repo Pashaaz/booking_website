@@ -28,13 +28,9 @@ class ProfileSerializer(serializers.ModelSerializer):
 
 
 class LoginFirstSerializer(serializers.Serializer):
-    phone = serializers.IntegerField(required=True,
-                                     validators=[RegexValidator(r'^989[0-3,9]\d{8}$', 'Enter a valid phone number.',
-                                                                'invalid')])
+    email = serializers.EmailField()
 
 
 class LoginSecondSerializer(serializers.Serializer):
-    phone = serializers.IntegerField(required=True,
-                                     validators=[RegexValidator(r'^989[0-3,9]\d{8}$', 'Enter a valid phone number.',
-                                                                'invalid')])
+    email = serializers.EmailField()
     code = serializers.CharField(max_length=6)
