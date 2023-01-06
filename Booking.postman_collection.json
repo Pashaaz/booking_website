@@ -1,0 +1,1925 @@
+{
+	"info": {
+		"_postman_id": "96635a62-ee51-4e0e-8505-25c2a85acebe",
+		"name": "Booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25079585"
+	},
+	"item": [
+		{
+			"name": "Residence",
+			"item": [
+				{
+					"name": "Hotel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/residence/api/hotels",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"residence",
+								"api",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/residence/api/hotels",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"residence",
+										"api",
+										"hotels"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 13:16:17 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1461"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"هتل داریوش کیش\",\n        \"description\": \"هتل بزرگ پنج ستاره داریوش با الهام از طرح شکوهمند تخت جمشید در زمینی با وسعت دوازده هکتار در شمال شرق جزیره زیبای کیش نزدیک به ساحل شرقی در سال 1382 توسط بهترین معماران ایرانی ساخته شده است. این هتل موزه دارای 184 اتاق، سوییت و کاباناهای مجلل با چشم انداز دریا و باغ است. ویژگی یکتای هتل بزرگ داریوش به عنوان یکی از بزرگترین و زیباترین هتلهای دنیا این است که تمدن و فرهنگ یک ملت بزرگ و کهن را به رخ جهانیان می کشاند و یگانه نماد تاریخی کشور است که با معماری بی همتای جهانی خود شکوه سلطنت گسترده فرهنگ و تمدن ایرانیان عزیز را هویدا نموده و دلیل قاطعی بر بام خلیج همیشه فارس است\",\n        \"photos\": [\n            {\n                \"image\": \"http://127.0.0.1:8000/media/hotels/avatars/dariush_1UBFYAE.jpeg\"\n            }\n        ],\n        \"location\": {\n            \"address\": \"جزیره کیش ، میدان داریوش ، هتل بزرگ داریوش کیش\",\n            \"map_link\": \"https://www.google.com/maps/place/Dariush+grand+Hotel/@26.5356085,54.0270437,18z/data=!4m5!3m4!1s0x3e50aa4d3b680af9:0x5a30586d94d7563d!8m2!3d26.535039!4d54.027696\"\n        }\n    }\n]"
+						},
+						{
+							"name": "Success Retrieve",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/residence/api/hotels/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"residence",
+										"api",
+										"hotels",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 13:15:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1459"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"هتل داریوش کیش\",\n    \"description\": \"هتل بزرگ پنج ستاره داریوش با الهام از طرح شکوهمند تخت جمشید در زمینی با وسعت دوازده هکتار در شمال شرق جزیره زیبای کیش نزدیک به ساحل شرقی در سال 1382 توسط بهترین معماران ایرانی ساخته شده است. این هتل موزه دارای 184 اتاق، سوییت و کاباناهای مجلل با چشم انداز دریا و باغ است. ویژگی یکتای هتل بزرگ داریوش به عنوان یکی از بزرگترین و زیباترین هتلهای دنیا این است که تمدن و فرهنگ یک ملت بزرگ و کهن را به رخ جهانیان می کشاند و یگانه نماد تاریخی کشور است که با معماری بی همتای جهانی خود شکوه سلطنت گسترده فرهنگ و تمدن ایرانیان عزیز را هویدا نموده و دلیل قاطعی بر بام خلیج همیشه فارس است\",\n    \"photos\": [\n        {\n            \"image\": \"http://127.0.0.1:8000/media/hotels/avatars/dariush_1UBFYAE.jpeg\"\n        }\n    ],\n    \"location\": {\n        \"address\": \"جزیره کیش ، میدان داریوش ، هتل بزرگ داریوش کیش\",\n        \"map_link\": \"https://www.google.com/maps/place/Dariush+grand+Hotel/@26.5356085,54.0270437,18z/data=!4m5!3m4!1s0x3e50aa4d3b680af9:0x5a30586d94d7563d!8m2!3d26.535039!4d54.027696\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Hotel Room",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/residence/api/hotelrooms",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"residence",
+								"api",
+								"hotelrooms"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/residence/api/hotelrooms",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"residence",
+										"api",
+										"hotelrooms"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 13:22:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1724"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"title\": \"داریوش ۳ خوابه\",\n        \"description\": \"اتاق خیلی خوب!\",\n        \"capacity\": 4.5,\n        \"room_number\": \"132\",\n        \"facilities\": [\n            {\n                \"title\": \"Free Wifi\"\n            }\n        ],\n        \"hotel\": {\n            \"id\": 1,\n            \"title\": \"هتل داریوش کیش\",\n            \"description\": \"هتل بزرگ پنج ستاره داریوش با الهام از طرح شکوهمند تخت جمشید در زمینی با وسعت دوازده هکتار در شمال شرق جزیره زیبای کیش نزدیک به ساحل شرقی در سال 1382 توسط بهترین معماران ایرانی ساخته شده است. این هتل موزه دارای 184 اتاق، سوییت و کاباناهای مجلل با چشم انداز دریا و باغ است. ویژگی یکتای هتل بزرگ داریوش به عنوان یکی از بزرگترین و زیباترین هتلهای دنیا این است که تمدن و فرهنگ یک ملت بزرگ و کهن را به رخ جهانیان می کشاند و یگانه نماد تاریخی کشور است که با معماری بی همتای جهانی خود شکوه سلطنت گسترده فرهنگ و تمدن ایرانیان عزیز را هویدا نموده و دلیل قاطعی بر بام خلیج همیشه فارس است\",\n            \"photos\": [\n                {\n                    \"image\": \"http://127.0.0.1:8000/media/hotels/avatars/dariush_1UBFYAE.jpeg\"\n                }\n            ],\n            \"location\": {\n                \"address\": \"جزیره کیش ، میدان داریوش ، هتل بزرگ داریوش کیش\",\n                \"map_link\": \"https://www.google.com/maps/place/Dariush+grand+Hotel/@26.5356085,54.0270437,18z/data=!4m5!3m4!1s0x3e50aa4d3b680af9:0x5a30586d94d7563d!8m2!3d26.535039!4d54.027696\"\n            }\n        },\n        \"photos\": [\n            {\n                \"image\": \"http://127.0.0.1:8000/media/residences/avatars/dariushroom_slbAY0u.jpeg\"\n            }\n        ]\n    }\n]"
+						},
+						{
+							"name": "Success Retrieve",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/residence/api/hotelrooms/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"residence",
+										"api",
+										"hotelrooms",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 13:44:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1722"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"داریوش ۳ خوابه\",\n    \"description\": \"اتاق خیلی خوب!\",\n    \"capacity\": 4.5,\n    \"room_number\": \"132\",\n    \"facilities\": [\n        {\n            \"title\": \"Free Wifi\"\n        }\n    ],\n    \"hotel\": {\n        \"id\": 1,\n        \"title\": \"هتل داریوش کیش\",\n        \"description\": \"هتل بزرگ پنج ستاره داریوش با الهام از طرح شکوهمند تخت جمشید در زمینی با وسعت دوازده هکتار در شمال شرق جزیره زیبای کیش نزدیک به ساحل شرقی در سال 1382 توسط بهترین معماران ایرانی ساخته شده است. این هتل موزه دارای 184 اتاق، سوییت و کاباناهای مجلل با چشم انداز دریا و باغ است. ویژگی یکتای هتل بزرگ داریوش به عنوان یکی از بزرگترین و زیباترین هتلهای دنیا این است که تمدن و فرهنگ یک ملت بزرگ و کهن را به رخ جهانیان می کشاند و یگانه نماد تاریخی کشور است که با معماری بی همتای جهانی خود شکوه سلطنت گسترده فرهنگ و تمدن ایرانیان عزیز را هویدا نموده و دلیل قاطعی بر بام خلیج همیشه فارس است\",\n        \"photos\": [\n            {\n                \"image\": \"http://127.0.0.1:8000/media/hotels/avatars/dariush_1UBFYAE.jpeg\"\n            }\n        ],\n        \"location\": {\n            \"address\": \"جزیره کیش ، میدان داریوش ، هتل بزرگ داریوش کیش\",\n            \"map_link\": \"https://www.google.com/maps/place/Dariush+grand+Hotel/@26.5356085,54.0270437,18z/data=!4m5!3m4!1s0x3e50aa4d3b680af9:0x5a30586d94d7563d!8m2!3d26.535039!4d54.027696\"\n        }\n    },\n    \"photos\": [\n        {\n            \"image\": \"http://127.0.0.1:8000/media/residences/avatars/dariushroom_slbAY0u.jpeg\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transportation",
+			"item": [
+				{
+					"name": "Flight",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/transport/api/flight/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"transport",
+								"api",
+								"flight",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success List",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/transport/api/flight/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"transport",
+										"api",
+										"flight",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 13:50:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "266"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"company\": {\n            \"title\": \"ماهان\"\n        },\n        \"origin\": \"Tehran\",\n        \"destination\": \"Shiraz\",\n        \"date\": \"2023-01-05T16:23:27+03:30\",\n        \"boarding_till\": \"16:23:38\",\n        \"depart_time\": \"16:23:39\",\n        \"arrive_time\": \"16:23:39\",\n        \"capacity\": 200,\n        \"gate\": \"12B\",\n        \"flight\": \"bnnadsfnknvloan193u109213ojlkn\"\n    }\n]"
+						},
+						{
+							"name": "Success Retrieve",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/transport/api/flight/1/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"transport",
+										"api",
+										"flight",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 13:51:06 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "264"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"company\": {\n        \"title\": \"ماهان\"\n    },\n    \"origin\": \"Tehran\",\n    \"destination\": \"Shiraz\",\n    \"date\": \"2023-01-05T16:23:27+03:30\",\n    \"boarding_till\": \"16:23:38\",\n    \"depart_time\": \"16:23:39\",\n    \"arrive_time\": \"16:23:39\",\n    \"capacity\": 200,\n    \"gate\": \"12B\",\n    \"flight\": \"bnnadsfnknvloan193u109213ojlkn\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User Registration",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "email",
+								"value": "ppasha.azadeh@gmail.com",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ppasha.azadeh@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "376782",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api/login/second/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api",
+								"login",
+								"second",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success Second step login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "email",
+										"value": "ppasha.azadeh@gmail.com",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ppasha.azadeh@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "code",
+											"value": "376782",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/api/login/second/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"api",
+										"login",
+										"second",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 16:16:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "483"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY3MzU0MDE3NCwiaWF0IjoxNjcyOTM1Mzc0LCJqdGkiOiJlNzQ4MGNmMjFmNWM0NmI4OTZkZjM3OTYxMDU3OGJiZiIsInVzZXJfaWQiOjF9.L-SrekFKU3eALqi0kH9RFsoMNFFWNhkCgpn0HorgcQE\",\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTM4OTc0LCJpYXQiOjE2NzI5MzUzNzQsImp0aSI6IjA0MzVhMWZhMDk1NTRiNWNiOGRkZTE1YzNkZWY3ZWUyIiwidXNlcl9pZCI6MX0.HWmBiWMnWki5zFHWAORvFWgffca3Rw8zZJ2DmfoKVaU\"\n}"
+						},
+						{
+							"name": "Success login first step",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ppasha.azadeh@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/api/login/first/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"api",
+										"login",
+										"first",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 16:07:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"768202\"\n}"
+						},
+						{
+							"name": "Success Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTM4OTc0LCJpYXQiOjE2NzI5MzUzNzQsImp0aSI6IjA0MzVhMWZhMDk1NTRiNWNiOGRkZTE1YzNkZWY3ZWUyIiwidXNlcl9pZCI6MX0.HWmBiWMnWki5zFHWAORvFWgffca3Rw8zZJ2DmfoKVaU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "aali.azadeh@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "pasha1382",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "09121117584",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/api/user/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"api",
+										"user",
+										""
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 05 Jan 2023 16:33:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"\",\n    \"last_name\": \"\",\n    \"email\": \"aali.azadeh@gmail.com\",\n    \"phone\": \"09121117584\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile Retrieve",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTkxNDQyLCJpYXQiOjE2NzI5ODc4NDIsImp0aSI6IjIwZTExOGIxMzI0NDQ2ODdiMDIzZWY3MWZiNmM1NTE5IiwidXNlcl9pZCI6MX0.cl75D16DuqnXxSirU0bZUsTtvPZVBjEr5jgOpsYhkS4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api/user/profile/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api",
+								"user",
+								"profile",
+								"2"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Profile Retrieve Unsuccessful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTkxNDQyLCJpYXQiOjE2NzI5ODc4NDIsImp0aSI6IjIwZTExOGIxMzI0NDQ2ODdiMDIzZWY3MWZiNmM1NTE5IiwidXNlcl9pZCI6MX0.cl75D16DuqnXxSirU0bZUsTtvPZVBjEr5jgOpsYhkS4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/api/user/profile/2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"api",
+										"user",
+										"profile",
+										"2"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 06:51:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "23"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Not found.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "User List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTkxNDQyLCJpYXQiOjE2NzI5ODc4NDIsImp0aSI6IjIwZTExOGIxMzI0NDQ2ODdiMDIzZWY3MWZiNmM1NTE5IiwidXNlcl9pZCI6MX0.cl75D16DuqnXxSirU0bZUsTtvPZVBjEr5jgOpsYhkS4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ppasha.azadeh@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "376782",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api/user/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api",
+								"user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User List Seccess",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTkxNDQyLCJpYXQiOjE2NzI5ODc4NDIsImp0aSI6IjIwZTExOGIxMzI0NDQ2ODdiMDIzZWY3MWZiNmM1NTE5IiwidXNlcl9pZCI6MX0.cl75D16DuqnXxSirU0bZUsTtvPZVBjEr5jgOpsYhkS4",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ppasha.azadeh@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "code",
+											"value": "376782",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/api/user/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"api",
+										"user",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 06:55:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "260"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"email\": \"ppasha.azadeh@gmail.com\",\n        \"phone\": \"09101100226\"\n    },\n    {\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"email\": \"yasramz@gmail.com\",\n        \"phone\": \"09121100226\"\n    },\n    {\n        \"first_name\": \"\",\n        \"last_name\": \"\",\n        \"email\": \"aali.azadeh@gmail.com\",\n        \"phone\": \"09121117584\"\n    }\n]"
+						},
+						{
+							"name": "User List Unsuccessful (permission ...)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyOTkyMDQ5LCJpYXQiOjE2NzI5ODg0NDksImp0aSI6ImExMGJlOGRkNzQzNjQxNTVhNzZjODMzMzBkNjE5ZTQwIiwidXNlcl9pZCI6M30.vQPV8ydHtxrcGWiYoX7LMLm0GeGxEtK2KBUQFn2lkOc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "ppasha.azadeh@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "code",
+											"value": "376782",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/users/api/user/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"api",
+										"user",
+										""
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 07:02:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"You do not have permission to perform this action.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "hotelroom",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "start_date",
+									"value": "2023-05-05",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "end_date",
+									"value": "2023-05-05",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "user",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "hotel_room",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "flight",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/book/api/hotelroom",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"book",
+								"api",
+								"hotelroom"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "hotelroom list success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2023-05-05",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "end_date",
+											"value": "2023-05-05",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "user",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "hotel_room",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "flight",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/book/api/hotelroom",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"book",
+										"api",
+										"hotelroom"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 11:14:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"status\": 1,\n        \"user\": 1,\n        \"hotel_room\": 1,\n        \"start_date\": \"2023-05-05T00:00:00+03:30\",\n        \"end_date\": \"2023-05-05T00:00:00+03:30\"\n    },\n    {\n        \"status\": 1,\n        \"user\": 1,\n        \"hotel_room\": 1,\n        \"start_date\": \"2023-05-05T00:00:00+03:30\",\n        \"end_date\": \"2023-05-05T00:00:00+03:30\"\n    }\n]"
+						},
+						{
+							"name": "hotelroom create unsuccessful (date already booked)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2023-05-05 12:30",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2023-05-10 12:30",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "hotel_room",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "flight",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/book/api/hotelroom/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"book",
+										"api",
+										"hotelroom",
+										""
+									]
+								}
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 11:23:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "51"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"detail\": \"Can't book by this start and end date!\"\n}"
+						},
+						{
+							"name": "hotelroom create successfull",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "start_date",
+											"value": "2023-05-02 12:30",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2023-05-4 12:30",
+											"type": "text"
+										},
+										{
+											"key": "user",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "hotel_room",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "flight",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/book/api/hotelroom/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"book",
+										"api",
+										"hotelroom",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 11:25:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"user\": 1,\n    \"hotel_room\": 1,\n    \"start_date\": \"2023-05-02T12:30:00+03:30\",\n    \"end_date\": \"2023-05-04T12:30:00+03:30\"\n}"
+						}
+					]
+				},
+				{
+					"name": "flight",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "flight",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/book/api/flight/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"book",
+								"api",
+								"flight",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "flight create successful",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "flight",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/book/api/flight/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"book",
+										"api",
+										"flight",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 11:32:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"status\": 1,\n    \"user\": 1,\n    \"flight\": 1,\n    \"is_valid\": false\n}"
+						},
+						{
+							"name": "flight list successfull",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjczMDA3MjcwLCJpYXQiOjE2NzMwMDM2NzAsImp0aSI6IjQyM2FkYzBmNDM3YzRiZWM5YmE2ZGYxYmJiM2U3NGIyIiwidXNlcl9pZCI6MX0.FD9LD6NvjS64tUz9gTg7hYepAuznbQHjthptLcYUIRI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/book/api/flight/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"book",
+										"api",
+										"flight",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 06 Jan 2023 11:33:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"status\": 1,\n        \"user\": 1,\n        \"flight\": 1,\n        \"is_valid\": false\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
