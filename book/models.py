@@ -33,7 +33,7 @@ class HotelRoomBooking(AbstractBooking):
     hotel_room = models.ForeignKey(HotelRoom, on_delete=models.CASCADE, related_name='room_bookings')
     start_date = models.DateTimeField(blank=True, null=True)
     end_date = models.DateTimeField(blank=True, null=True)
-    booked_days_number = models.DurationField()
+    # booked_days_number = models.DurationField()
 
     def get_total_price(self):
         pass
@@ -61,7 +61,7 @@ class FlightBooking(AbstractBooking):
     is_valid = models.BooleanField(default=True)
 
     def available_number(self):
-        flight_capacity = Flight.objects.get(flight_id=self.flight_id).capacity
+        flight_capacity = Flight.objects.get(flight=self.flight).capacity
         booked_number = FlightBooking.objects.all().filter(flight_id=self.flight_id, is_valid=True).count()
 
         available_number = flight_capacity - booked_number
