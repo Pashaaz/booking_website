@@ -14,6 +14,8 @@ from utils.filtering import HotelRoomBookingFilter
 
 class HotelRoomSearchBookedViewSet(mixins.ListModelMixin,
                                    viewsets.GenericViewSet):
+
+    serializer_class = HotelRoomBookingSerializer
     queryset = HotelRoomBooking.objects.all()
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = HotelRoomBookingFilter

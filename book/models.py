@@ -39,17 +39,17 @@ class HotelRoomBooking(AbstractBooking):
         pass
 
     def is_available(self):
-        queryset = HotelRoomBooking.objects.all().filter(hotel_room_id=self.hotel_room_id)
+        queryset = HotelRoomBooking.objects.all().filter(hotel_room=self['hotel_room'])
         is_available = True
 
         for item in queryset:
-            if self.start_date <= item.start_date <= self.end_date:
+            if self['start_date'] <= item.start_date <= self['end_date']:
                 is_available = False
 
-            elif self.start_date <= item.end_date <= self.end_date:
+            elif self['start_date'] <= item.end_date <= self['end_date']:
                 is_available = False
 
-            elif self.start_date >= item.start_date and self.end_date <= item.end_date:
+            elif self['start_date'] >= item.start_date and self['end_date'] <= item.end_date:
                 is_available = False
 
         return is_available
@@ -61,8 +61,8 @@ class FlightBooking(AbstractBooking):
     is_valid = models.BooleanField(default=True)
 
     def available_number(self):
-        flight_capacity = Flight.objects.get(flight=self.flight).capacity
-        booked_number = FlightBooking.objects.all().filter(flight_id=self.flight_id, is_valid=True).count()
+        flight_capacity = Flight.objects.get(id=self['flight'].id).capacity
+        booked_number = FlightBooking.objects.all().filter(flight_id=self['flight'].id, is_valid=True).count()
 
         available_number = flight_capacity - booked_number
 

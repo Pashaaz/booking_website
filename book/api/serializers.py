@@ -14,7 +14,7 @@ class HotelRoomBookingSerializer(serializers.ModelSerializer):
                   'start_date', 'end_date')
 
     def create(self, validated_data):
-        if HotelRoomBooking.is_available(HotelRoomBooking(validated_data['hotel_room'])):
+        if HotelRoomBooking.is_available(validated_data):
 
             return super(HotelRoomBookingSerializer, self).create(validated_data)
 
@@ -28,7 +28,7 @@ class FlightBookingSerializer(serializers.ModelSerializer):
         fields = ('id', 'status', 'user', 'flight', 'is_valid')
 
     def create(self, validated_data):
-        if FlightBooking.available_number(FlightBooking(validated_data['flight'])) > 0:
+        if FlightBooking.available_number(validated_data) > 0:
             return super(FlightBookingSerializer, self).create(validated_data)
         else:
             raise NotAcceptable(detail='Flight not available!', code=status.HTTP_400_BAD_REQUEST)
