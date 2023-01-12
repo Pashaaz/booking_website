@@ -1,5 +1,7 @@
 from django.db import models
 from django.conf import settings
+from django.core.validators import MaxValueValidator, MinValueValidator
+
 from residence.models import Hotels
 from transportation.models import Companies
 
@@ -29,9 +31,33 @@ class AbstractComment(models.Model):
         abstract = True
 
 
+class AbstractRating(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user_ratings')
+    rate = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
+    created_time = models.DateTimeField(auto_now_add=True)
+    modified_time = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+
+
 class HotelComment(AbstractComment):
     hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='hotel_comments')
 
 
 class CompanyComment(AbstractComment):
     company = models.ForeignKey(Companies, on_delete=models.CASCADE, related_name='company_comments')
+
+
+class HotelRating(AbstractRating):
+    hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='hotel_ratings')
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=('user', 'hotel'), name='unique_user_hotel')]
+
+
+class CompanyRating(AbstractRating):
+    company = models.ForeignKey(Companies, on_delete=models.CASCADE, related_name='company_ratings')
+
+    class Meta:
+        constraints = [models.UniqueConstraint(fields=('user', 'company'), name='unique_user_company')]
