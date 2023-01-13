@@ -16,11 +16,9 @@ class AbstractComment(models.Model):
 
     parent = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
 
-
     comment_body = models.TextField()
 
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES, default=1)
-
 
     created_time = models.DateTimeField(auto_now_add=True)
     modified_time = models.DateTimeField(auto_now=True)
