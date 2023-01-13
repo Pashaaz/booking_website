@@ -8,7 +8,7 @@ from viewpoints.models import (
 )
 
 
-class HotelCommentSerializers(serializers.ModelSerializer):
+class HotelCommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HotelComment
@@ -20,7 +20,7 @@ class HotelCommentSerializers(serializers.ModelSerializer):
         }
 
 
-class CompanyCommentSerializers(serializers.ModelSerializer):
+class CompanyCommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CompanyComment
@@ -32,7 +32,7 @@ class CompanyCommentSerializers(serializers.ModelSerializer):
         }
 
 
-class HotelRatingSerializers(serializers.ModelSerializer):
+class HotelRatingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HotelRating
