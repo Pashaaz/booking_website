@@ -22,7 +22,8 @@ class AbstractPaymentLog(models.Model):
 
 
 class HotelRoomPrice(AbstractPrice):
-    hotel_room = models.ForeignKey(HotelRoom, on_delete=models.CASCADE)
+    hotel_room = models.ForeignKey(HotelRoom, on_delete=models.CASCADE,
+                                   related_name='hotel_room_prices')
 
 
 class FlightPrice(AbstractPrice):
@@ -33,7 +34,8 @@ class FlightPrice(AbstractPrice):
     )
 
     flight_type = models.SmallIntegerField(choices=TYPE_CHOICES)
-    flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+    flight = models.ForeignKey(Flight, on_delete=models.CASCADE,
+                               related_name='flight_prices')
 
 
 class HotelRoomPaymentLog(AbstractPaymentLog):
