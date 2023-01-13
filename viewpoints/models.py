@@ -16,13 +16,11 @@ class AbstractComment(models.Model):
 
     parent = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True)
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
-                             related_name='%(class)ss')
+
     comment_body = models.TextField()
 
     status = models.PositiveSmallIntegerField(choices=STATUS_CHOICES, default=1)
-    validated_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True,
-                                     related_name='validated_%(class)ss')
+
 
     created_time = models.DateTimeField(auto_now_add=True)
     modified_time = models.DateTimeField(auto_now=True)
@@ -32,7 +30,7 @@ class AbstractComment(models.Model):
 
 
 class AbstractRating(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='user_ratings')
+
     rate = models.PositiveSmallIntegerField(validators=[MinValueValidator(1), MaxValueValidator(10)])
     created_time = models.DateTimeField(auto_now_add=True)
     modified_time = models.DateTimeField(auto_now=True)
@@ -43,14 +41,24 @@ class AbstractRating(models.Model):
 
 class HotelComment(AbstractComment):
     hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='hotel_comments')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
+                             related_name='%(class)ss')
+    validated_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True,
+                                     related_name='validated_%(class)ss')
 
 
 class CompanyComment(AbstractComment):
     company = models.ForeignKey(Companies, on_delete=models.CASCADE, related_name='company_comments')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
+                             related_name='%(class)ss')
+    validated_by = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True,
+                                     related_name='validated_%(class)ss')
 
 
 class HotelRating(AbstractRating):
     hotel = models.ForeignKey(Hotels, on_delete=models.CASCADE, related_name='hotel_ratings')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
+                             related_name='user_hotel_ratings')
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=('user', 'hotel'), name='unique_user_hotel')]
@@ -58,6 +66,8 @@ class HotelRating(AbstractRating):
 
 class CompanyRating(AbstractRating):
     company = models.ForeignKey(Companies, on_delete=models.CASCADE, related_name='company_ratings')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
+                             related_name='user_company_ratings')
 
     class Meta:
         constraints = [models.UniqueConstraint(fields=('user', 'company'), name='unique_user_company')]

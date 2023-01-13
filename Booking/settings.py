@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'book.apps.BookConfig',
     'users.apps.UsersConfig',
     'payment.apps.PriceConfig',
+    'viewpoints.apps.ViewpointsConfig',
 
 ]
 
