@@ -9,6 +9,7 @@ class CustomUser(AbstractUser):
         message='Please enter a valid number (09...)')])
     password = models.CharField(max_length=20)
     email = models.EmailField(unique=True)
+    iri_to = models.CharField(max_length=3, blank=True, null=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username", "phone"]
