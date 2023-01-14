@@ -21,6 +21,11 @@ class AbstractPaymentLog(models.Model):
         abstract = True
 
 
+class Currency(models.Model):
+    iri_to = models.CharField(max_length=3)
+    ratio = models.IntegerField()
+
+
 class HotelRoomPrice(AbstractPrice):
     hotel_room = models.ForeignKey(HotelRoom, on_delete=models.CASCADE,
                                    related_name='hotel_room_prices')
