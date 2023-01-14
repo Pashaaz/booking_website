@@ -41,6 +41,9 @@ class UserViewSet(
         elif self.action == 'list':
             return [IsAdminUser()]
 
+        elif self.action == 'update':
+            return [IsAuthenticated()]
+
 
 class LoginFirstAPIView(GenericAPIView):
     serializer_class = LoginFirstSerializer
