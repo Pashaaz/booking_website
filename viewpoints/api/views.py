@@ -19,7 +19,6 @@ from viewpoints.models import (
 class HotelCommentViewSet(mixins.CreateModelMixin,
                           mixins.ListModelMixin,
                           viewsets.GenericViewSet):
-
     authentication_classes = [JWTAuthentication]
     serializer_class = HotelCommentSerializer
     permission_classes = [IsAuthenticated]
