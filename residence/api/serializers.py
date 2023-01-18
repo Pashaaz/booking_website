@@ -1,5 +1,7 @@
 from django.db import transaction
 from rest_framework import serializers, exceptions
+
+from payment.api.serializers import HotelRoomCurrencySerializer
 from residence.models import *
 
 
@@ -56,10 +58,13 @@ class HotelRoomSerializer(serializers.ModelSerializer):
     facilities = FacilitySerializer(many=True)
     hotel = HotelSerializer()
     photos = HotelRoomAvatarSerializer(many=True)
+    hotel_room_prices = HotelRoomCurrencySerializer()
 
     class Meta:
         model = HotelRoom
-        fields = ('id', 'title', 'description', 'capacity', 'room_number', 'facilities', 'hotel', 'photos')
+        fields = ('id', 'title', 'description',
+                  'capacity', 'room_number', 'facilities',
+                  'hotel', 'photos', 'hotel_room_prices')
 
     @transaction.atomic
     def create(self, validated_data):
