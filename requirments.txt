@@ -5,4 +5,3 @@ python-decouple==3.6
 djangorestframework-simplejwt==5.2.2
 django-filter==22.1
 pydot==1.4.2
-gunicorn
