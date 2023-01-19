@@ -3,7 +3,7 @@ FROM python:3.9-alpine
 RUN mkdir /project
 WORKDIR /project
 
-COPY requirements.txt /project
+COPY requirments.txt /project
 
 RUN apk update \
     && apk add --virtual build-deps gcc python3-dev musl-dev \
@@ -12,7 +12,7 @@ RUN apk update \
 #RUN apk add nginx
 #COPY imdb.conf /etc/nginx/conf.d/
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirments.txt
 
 COPY . /project
 
